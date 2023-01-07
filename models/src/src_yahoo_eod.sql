@@ -1,7 +1,7 @@
 
 --END OF DAY DATA
 with eod_table as (
-    select * from PC_FIVETRAN_DB.S3.RAW_YAHOO_EOD_DATA
+    select * from FT_DB.FT_STAGING.RAW_S_3_YAHOO_EOD
     )
 
 SELECT
