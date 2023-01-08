@@ -41,7 +41,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-snowflake
   
-      
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, prod!
+      - name: Deploy
+        run: |
+         dbt run --profiles-dir ./ci_profiles
+         dbt test --profiles-dir ./ci_profiles
